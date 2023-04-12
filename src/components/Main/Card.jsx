@@ -1,23 +1,21 @@
 
 
-const Card = (data) => {
-    console.log("ne geliyo", data)
-    return(
-        <div className="cards">
-            <div className="title">
-                <h1>{data.title}</h1>
-            </div>
-            <div className="date">
-                <h1>{data.date}</h1>
-            </div>
-            <img src={data.image} alt="" />
-            <div className="card-over">
-                <p>
-                    {data.desc}
-                </p>
-            </div>
+ const Card = ({title,date,desc,image}) => {
+  return (
+    <div className="cards">
+        <div className="title">
+            <h1>{title}</h1>
         </div>
-    )
+        <div className="date">
+            {date}
+        </div>
+        <img src={image} alt={title} />
+        <div className="card-over">
+            <p>
+                {desc}
+            </p>
+        </div>
+    </div>
+  )
 }
-
-export default Card;
+export default Card

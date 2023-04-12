@@ -5,6 +5,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 2rem;
+    padding-bottom: 2rem;
 
     .cards{
         // border: 2px solid red;
@@ -12,6 +13,7 @@
         height: 350px;
         position: relative;
         overflow: hidden;
+        margin: 10px;
         &:hover .card-over{
             transform: translateY(0%);
         }
@@ -20,13 +22,13 @@
         }
 
         .title{
-            position: absolute;
+            position:absolute;
             top: 0;
             left:0;
             background-color: rgba(0,0,0,0.8);
             color: $cardNavBgColor;
             padding: 1rem;
-            border-radius: 10px 20px 20px 20px;
+            border-radius: 10px 20px 20px 2px;
             z-index: 2;
         }
 
@@ -40,14 +42,14 @@
             padding: 1rem;
             font-size: 0.3rem;
             border-radius: 10px;
-            z-index: 2;
+            z-index: 3;
         }
         img{
             width: 500px;
             height: 350px;
             object-fit: cover;
             border-radius: 10px;
-            opacity: 0.5;
+            opacity: 0.8;
         }
         .card-over{
             width: 500px;
@@ -58,16 +60,15 @@
             font-size: 1.5rem;
             padding: 1rem;
             border-radius: 10px;
-            transform: translateY(100%);
-            transition: transform 0.7s ease-in-out;
-            z-index: 3;
+           transform: translateY(100%);
+           transition: 0.7s ease-in-out;
+           z-index: 3;
+        }
+        &:hover .card-over{
+            transform: translate(0%);
             max-height: 75%;
             text-align: justify;
             overflow: auto;
-
-            &::-webkit-scrollbar{
-                display: none;
-            }
         }
     }
 }
